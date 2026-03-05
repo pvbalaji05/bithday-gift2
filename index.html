@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Paal Kolukatta 💖</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:linear-gradient(135deg,#ff4da6,#ff85c1,#ffc2e0);
+color:white;
+transition:1s;
+}
+
+.page{
+display:none;
+height:100vh;
+width:100%;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:25px;
+animation:fade 1s ease;
+}
+
+.page.active{
+display:flex;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+font-size:28px;
+margin-bottom:20px;
+text-shadow:0 0 15px rgba(255,255,255,0.8);
+}
+
+p{
+max-width:750px;
+line-height:1.8;
+margin-bottom:20px;
+font-size:16px;
+}
+
+button{
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff4da6;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+background:#fff0f5;
+}
+
+input{
+padding:10px;
+border-radius:20px;
+border:none;
+text-align:center;
+margin-bottom:10px;
+}
+
+.heart{
+position:absolute;
+font-size:22px;
+animation:float 8s linear infinite;
+opacity:0.8;
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-110vh);opacity:0;}
+}
+
+.loveMeter{
+font-size:22px;
+margin:15px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music">
+<source src="https://cdn.pixabay.com/audio/2022/03/15/audio_4c8d8c8b8e.mp3" type="audio/mp3">
+</audio>
+
+<!-- 1 -->
+<div class="page active" id="page1">
+<h1>💖 Open Your Surprise 💖</h1>
+<button onclick="nextPage(2)">Open</button>
+</div>
+
+<!-- 2 -->
+<div class="page" id="page2">
+<h1>🔐 Enter Password</h1>
+<p>Hint: Our Date</p>
+<input type="password" id="password">
+<button onclick="checkPassword()">Uncloak</button>
+</div>
+
+<!-- 3 -->
+<div class="page" id="page3">
+<h1>🎂 Happy Birthday My Love 🎂</h1>
+<p>Today is not just your birthday… it’s the celebration of the most beautiful soul in my life.</p>
+<button onclick="nextPage(4)">Next</button>
+</div>
+
+<!-- 4 -->
+<div class="page" id="page4">
+<h1>🌸 The Day You Were Born</h1>
+<p>The world became softer, brighter, kinder… because you exist.</p>
+<button onclick="nextPage(5)">Next</button>
+</div>
+
+<!-- 5 -->
+<div class="page" id="page5">
+<h1>💫 Our Beginning</h1>
+<p>From classmates who didn’t talk… to strangers asking assignments… to daily Instagram talks… destiny was slowly writing us.</p>
+<button onclick="nextPage(6)">Next</button>
+</div>
+
+<!-- 6 -->
+<div class="page" id="page6">
+<h1>🚆 That Train Call</h1>
+<p>Three hours… one call… and my heart quietly choosing you without telling me.</p>
+<button onclick="nextPage(7)">Next</button>
+</div>
+
+<!-- 7 -->
+<div class="page" id="page7">
+<h1>💍 The Nose Pin</h1>
+<p>You pierced your nose… and said it was for grandma. But we both know… it was for me. That moment meant more than words.</p>
+<button onclick="nextPage(8)">Next</button>
+</div>
+
+<!-- 8 -->
+<div class="page" id="page8">
+<h1>🌙 2:35 AM</h1>
+<p>That “love you idiot” at 2:35 AM… changed everything. That time is forever ours.</p>
+<button onclick="nextPage(9)">Next</button>
+</div>
+
+<!-- 9 -->
+<div class="page" id="page9">
+<h1>❤️ Love Meter ❤️</h1>
+<div class="loveMeter" id="meter">Click to Measure</div>
+<button onclick="measureLove()">Measure Love</button>
+<br><br>
+<button onclick="nextPage(10)">Next</button>
+</div>
+
+<!-- 10 -->
+<div class="page" id="page10">
+<h1>☕ That Pongal Date</h1>
+<p>Same color dress. Holding your hand in that café. That day felt like a dream I never wanted to wake from.</p>
+<button onclick="nextPage(11)">Next</button>
+</div>
+
+<!-- 11 -->
+<div class="page" id="page11">
+<h1>💗 You Mean Everything</h1>
+<p>You are my calm, my happiness, my safe place, my favourite notification.</p>
+<button onclick="nextPage(12)">Next</button>
+</div>
+
+<!-- 12 -->
+<div class="page" id="page12">
+<h1>✨ Even Our Fights</h1>
+<p>Even when we fight, we fix it. That’s what makes us real. We always choose each other.</p>
+<button onclick="nextPage(13)">Next</button>
+</div>
+
+<!-- 13 -->
+<div class="page" id="page13">
+<h1>🌅 Our Future</h1>
+<p>I want to travel life with you. Celebrate birthdays. Laugh at nothing. Grow old holding your hand.</p>
+<button onclick="nextPage(14)">Next</button>
+</div>
+
+<!-- 14 -->
+<div class="page" id="page14">
+<h1>💖 Forever Choice</h1>
+<p>No matter how many years pass, I will always choose you.</p>
+<button onclick="nextPage(15)">Next</button>
+</div>
+
+<!-- 15 -->
+<div class="page" id="page15">
+<h1>💍 One Question…</h1>
+<p>Will you continue walking this journey with me?</p>
+<button onclick="nextPage(16)">Yes 💖</button>
+</div>
+
+<!-- 16 -->
+<div class="page" id="page16">
+<h1>💞 Happy Birthday My Infinity 💞</h1>
+<p>You are my today, my tomorrow, my always. Happy Birthday Paal Kolukatta ❤️</p>
+</div>
+
+<script>
+function nextPage(n){
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+document.getElementById("page"+n).classList.add("active");
+}
+
+function checkPassword(){
+if(document.getElementById("password").value==="23536"){
+document.getElementById("music").play();
+nextPage(3);
+}else{
+alert("Wrong Password 💔");
+}
+}
+
+function measureLove(){
+document.getElementById("meter").innerHTML="♾️ INFINITE ♾️";
+}
+
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💖";
+heart.style.left=Math.random()*100+"vw";
+heart.style.bottom="-20px";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),8000);
+},700);
+</script>
+
+</body>
+</html>
